@@ -14,3 +14,11 @@
 ### 思路
 1. 模拟，根据罗马数字的唯一表示法，为了表示一个给定的整数 `num`，我们寻找不超过 `num` 的最大符号值，将 `num` 减去该符号值，然后继续寻找不超过 `num` 的最大符号值，将该符号拼接在上一个找到的符号之后，循环直至 `num` 为 0。
 2. 暴力，找规律，整理每个位置对应数字的字符
+
+## [1475. Final Prices With a Special Discount in a Shop](https://leetcode.cn/problems/final-prices-with-a-special-discount-in-a-shop/)
+### 思路
+1. 暴力：从第 i+1 件商品开始依次向后遍历，直到找到第一个满足 `prices[j] <= prices[i]`的下标 j 即可求出该物品的最终折扣价格
+2. 单调栈——使得查询`prices` 中每个元素对应位置的右边的第一个更小的元素值时不需要再遍历 `prices`
+
+
+

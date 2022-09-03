@@ -1,8 +1,9 @@
 //https://leetcode.cn/problems/maximum-length-of-pair-chain/
 
-package src
+package main
 
 import (
+	"fmt"
 	"math"
 	"sort"
 )
@@ -57,11 +58,11 @@ func findLongestChain_Optimization(pairs [][]int) int {
 	return ans
 }
 
-//func main() {
-//	pairs := [][]int{
-//		{1, 2},
-//		{7, 8},
-//		{4, 5},
-//	}
-//	fmt.Println(findLongestChain(pairs))
-//}
+func main() {
+	pairs := [][]int{
+		{1, 2},
+		{7, 8},
+		{4, 5},
+	}
+	fmt.Println(findLongestChain(pairs))
+}

@@ -1,3 +1,4 @@
+// https://leetcode.cn/problems/special-positions-in-a-binary-matrix/
 package main
 
 func numSpecial(mat [][]int) int {

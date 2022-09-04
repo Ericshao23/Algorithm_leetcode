@@ -46,3 +46,7 @@
 2. 列的标记值：定义第 j 列的标记值为：该列所有 1所在行中的 1的数量之和，用原始矩阵的第一行来作为我们标记列的额外空间，从而降低空间复杂度
 
 ### [code](./src/special_positions_in_a_binary_matrix.go)
+
+## [43. Multiply Strings](https://leetcode.cn/problems/multiply-strings/)
+### 思路
+1. 竖式计算：将`num2`的每一位和`num1`相乘，结果累加

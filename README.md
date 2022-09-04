@@ -50,3 +50,4 @@
 ## [43. Multiply Strings](https://leetcode.cn/problems/multiply-strings/)
 ### 思路
 1. 竖式计算：将`num2`的每一位和`num1`相乘，结果累加
+### [code](./src/multiply_strings.go)

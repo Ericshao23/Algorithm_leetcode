@@ -51,3 +51,18 @@
 ### 思路
 1. 竖式计算：将`num2`的每一位和`num1`相乘，结果累加
 ### [code](./src/multiply_strings.go)
+
+## [652. Find Duplicate Subtrees](https://leetcode.cn/problems/find-duplicate-subtrees/)
+### 思路
+
+### [code](./src/find_duplicate_subtress.go)
+
+## [JZ37 序列化二叉树](https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84?tpId=265&tqId=39239&rp=1&ru=/exam/oj/ta&qru=/exam/oj/ta&sourceUrl=%2Fexam%2Foj%2Fta%3FtpId%3D13&difficulty=undefined&judgeStatus=undefined&tags=&title=)
++ 二叉树序列化(Serialize)：把一棵二叉树按照某种遍历方式的结果以某种格式保存为字符串，从而使得内存中建立起来的二叉树可以持久保存。
++ 二叉树反序列化(Deserialize):根据某种遍历顺序得到的序列化字符串结果str，重构二叉树。
+### 思路
+1. DFS（深度优先搜索）：
+   1. [先序遍历](./src/serialize_deserialize.go)
+   2. [中序遍历](./src/serialize&deserialize_optimization.go)
+
+

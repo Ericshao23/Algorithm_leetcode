@@ -36,3 +36,33 @@ func findDuplicateSubtrees(root *TreeNode) []*TreeNode {
 	}
 	return ans
 }
+
+func findDuplicateSubtrees_optimization(root *TreeNode) []*TreeNode {
+	type pair struct {
+		node *TreeNode
+		idx  int
+	}
+	repeat := map[*TreeNode]struct{}{}
+	seen := map[[3]int]pair{}
+	idx := 0
+	var dfs func(*TreeNode) int
+	dfs = func(node *TreeNode) int {
+		if node == nil {
+			return 0
+		}
+		tri := [3]int{node.Val, dfs(node.Left), dfs(node.Right)}
+		if p, ok := seen[tri]; ok {
+			repeat[p.node] = struct{}{}
+			return p.idx
+		}
+		idx++
+		seen[tri] = pair{node, idx}
+		return idx
+	}
+	dfs(root)
+	ans := make([]*TreeNode, 0, len(repeat))
+	for node := range repeat {
+		ans = append(ans, node)
+	}
+	return ans
+}

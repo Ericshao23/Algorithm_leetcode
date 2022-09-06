@@ -54,6 +54,13 @@
 
 ## [652. Find Duplicate Subtrees](https://leetcode.cn/problems/find-duplicate-subtrees/)
 ### 思路
+1.将每一棵子树都「序列化」成一个字符串，并且保证：
++ 相同的子树会被序列化成相同的子串；
++ 不同的子树会被序列化成不同的子串。
+2. 使用三元组进行唯一表示：用一个三元组直接表示一棵子树，即 (x, l, r)它们分别表示：
++ 根节点的值为 x； 
++ 左子树的序号为 l； 
++ 右子树的序号为 r
 
 ### [code](./src/find_duplicate_subtress.go)
 

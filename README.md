@@ -72,4 +72,8 @@
    1. [先序遍历](./src/serialize_deserialize.go)
    2. [中序遍历](./src/serialize&deserialize_optimization.go)
 
-
+## [828.Count Unique Characters of All Substrings of a Given String](https://leetcode.cn/problems/count-unique-characters-of-all-substrings-of-a-given-string/)
+### 思路
++ 当字符是"头元素"，那么出现次数为`数组长度 - 元素下标位置`
++ 当字符是"尾元素"，那么出现次数为`元素下标位置 - （-1）`
++ 字符是"中间元素"，出现次数为：`(元素下标位置 - (-1)) * (数组长度 - 元素下标位置)`

@@ -16,4 +16,22 @@ func trimBST(root *TreeNode, low int, high int) *TreeNode {
 			root = root.Left
 		}
 	}
+	if root == nil {
+		return nil
+	}
+	for node := root; node.Left != nil; {
+		if node.Left.Val < low {
+			node.Left = node.Left.Right
+		} else {
+			node = node.Left
+		}
+	}
+	for node := root; node.Right != nil; {
+		if node.Left.Val >= low {
+			node.Right = node.Right.Left
+		} else {
+			node = node.Right
+		}
+	}
+	return root
 }

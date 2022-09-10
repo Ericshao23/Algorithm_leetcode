@@ -2,10 +2,16 @@
 
 package main
 
-func minOperations(logs []string) int{
-	for _,log :=range logs{
-		if log =='./'{
+func minOperations(logs []string) (depth int) {
+	for _, log := range logs {
+		if log == "./" {
 			continue
 		}
+		if log != "../" {
+			depth++
+		} else if depth > 0 {
+			depth--
+		}
 	}
+	return
 }

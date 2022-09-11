@@ -83,4 +83,23 @@
 1. 首先按照空格对字符串分割，得到单词集合和空格数
    1. 单词书为1，则将全部的空格拼接到这个单词后面即可
    2. 计算出单词间的间隔，并按照单词及间隔来进行拼接，若拼接后仍有多余的空格，则将剩下的空格拼接在末尾即可。
-### [code]()
+### [code](./src/rearrange_spaces_between_words.go)
+
+## [1598. Crawler Log Folder](https://leetcode.cn/problems/crawler-log-folder/)
+### 思路
+1. 模拟：如果当前的操作为 `"../"`移动到当前文件夹的父文件夹，如果已经在主文件夹下，则继续停留在当前文件夹，如果层次深度`depth>0` 则将 `depth - 1`，否则 depth 保持不变；如果当前的操作为`"./"`继续停留在当前文件夹，此时`depth`保持不变；如果当前的操作为`"x/"`移动到下一层名为 x 的子文件夹中，则此时将 `depth + 1`。
+
+### [code](/src/crawler_log_folder.go)
+
+## [669. Trim a Binary Search Tree](https://leetcode.cn/problems/trim-a-binary-search-tree/)
+### 思路
+1. 明白二叉树特点，左子树的值小于根节点，右子树的值大于根节点
+2. 所以如果根节点不在对应范围的话，只需要考虑一侧子树的修建
+3. 左子树的trim
+
+   1. 根节点的左节点为空节点，不需要trim
+   2. 根节点的左节点非空，修建
+      
+      + 如果它的左结点 left 的值小于 low，那么 left 以及 left 的左子树都不符合要求，我们将 node 的左结点设为left 的右结点，然后再重新对 node 的左子树进行修剪。
+      + 如果它的左结点 left 的值大于等于 low，又因为 node 的值已经符合要求，所以 left 的右子树一定符合要求。我们只需要对 left 的左子树进行修剪。我们令 node 等于 left ，然后再重新对 node 的左子树进行修剪。
+### [code](./src/trim_a_binary_search_tree.go)

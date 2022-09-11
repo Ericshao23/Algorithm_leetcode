@@ -87,13 +87,13 @@ func main() {
 			}
 			ans += 1
 			// 存在部分问题待解决
-			if qa.Top() > qb.Top() {
-				qa.Push(qa.Top())
-				qa.Pop()
-			} else {
-				qb.Push(qb.Pop())
-				qb.Pop()
-			}
+			//if float32(qa.Top()) > float32(qb.Top()) {
+			//	qa.Push(qa.Top())
+			//	qa.Pop()
+			//} else {
+			//	qb.Push(qb.Pop())
+			//	qb.Pop()
+			//}
 		}
 		fmt.Println(ans)
 	}

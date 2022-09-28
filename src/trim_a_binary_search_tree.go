@@ -1,7 +1,7 @@
 // https://leetcode.cn/problems/trim-a-binary-search-tree/
 package main
 
-// Definition for a binary tree node.
+Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

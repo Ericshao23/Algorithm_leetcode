@@ -107,3 +107,5 @@
 ## [14. Longest Common Prefix](https://leetcode.cn/problems/longest-common-prefix/)
 ### 思路
 1. 暴力，纵向扫描，从前往后依次遍历所有字符的每一列，比较相同列上的字符是否相同，相同继续下一列，不相同则当前不再属于公共前缀。
+
+### [code](./src/longest_common_prefix.go)

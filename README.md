@@ -103,3 +103,7 @@
       + 如果它的左结点 left 的值小于 low，那么 left 以及 left 的左子树都不符合要求，我们将 node 的左结点设为left 的右结点，然后再重新对 node 的左子树进行修剪。
       + 如果它的左结点 left 的值大于等于 low，又因为 node 的值已经符合要求，所以 left 的右子树一定符合要求。我们只需要对 left 的左子树进行修剪。我们令 node 等于 left ，然后再重新对 node 的左子树进行修剪。
 ### [code](./src/trim_a_binary_search_tree.go)
+
+## [14. Longest Common Prefix](https://leetcode.cn/problems/longest-common-prefix/)
+### 思路
+1. 暴力，纵向扫描，从前往后依次遍历所有字符的每一列，比较相同列上的字符是否相同，相同继续下一列，不相同则当前不再属于公共前缀。

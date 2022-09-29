@@ -109,3 +109,14 @@
 1. 暴力，纵向扫描，从前往后依次遍历所有字符的每一列，比较相同列上的字符是否相同，相同继续下一列，不相同则当前不再属于公共前缀。
 
 ### [code](./src/longest_common_prefix.go)
+
+### [面试题 01.09. String Rotation LCCI](https://leetcode.cn/problems/string-rotation-lcci/)
+### 思路
+1. 模拟：首先考虑传入的两个字符串的长度，如果长度不一致，是无法轮转到的；其次s1中的某位字符轮转后，对应s2中的位置为(i+j) mod len
+2. 将字符s1拼接欸s1+s1，那么无论如何旋转，s2一定是s1+s1的子字符串
+
+### [题目：28. Find the Index of the First Occurrence in a String](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/)
+> 1. 暴力匹配，依次以原串的每个字符为匹配起始点，匹配需要匹配的字符，一致返回起始点位置，否则继续下一个位置
+> 2. KMP
+> 3. [code](./src/find_index_of_first_occurrence_string.go)
+### [code](./src/String_Rotation_LCCL.go)
